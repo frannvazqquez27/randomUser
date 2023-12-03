@@ -35,7 +35,6 @@ async function generateRandomUser() {
   try {
     const personData = await fetchUserData();
     const personObject = await mapToPersonObjects(personData);
-
     const currentTimeData = await fetchCurrentTime(personObject.location.city);
 
     img.src = `${personObject.picture.large}`;

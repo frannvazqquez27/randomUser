@@ -14,7 +14,7 @@ export async function fetchCurrentTime(city) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '',
+      'X-RapidAPI-Key': 'fb5233974amsh0ed628cd8e4c43bp163e69jsn90f9ff634f35',
       'X-RapidAPI-Host': 'world-time-by-api-ninjas.p.rapidapi.com',
     },
   };
@@ -22,11 +22,7 @@ export async function fetchCurrentTime(city) {
   try {
     const response = await fetch(url, options);
     const data = await response.json();
-    return {
-      hour: data.hour,
-      minute: data.minute,
-      second: data.second
-    };
+    return data;
   } catch (error) {
     console.error('Error fetching current time:', error);
     throw error;
