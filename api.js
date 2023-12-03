@@ -14,7 +14,7 @@ export async function fetchCurrentTime(city) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '',
+      'X-RapidAPI-Key': 'API_KEY',
       'X-RapidAPI-Host': 'world-time-by-api-ninjas.p.rapidapi.com',
     },
   };
